@@ -4,6 +4,8 @@ Long-lasting dogfooding ground for the [agent-team](https://github.com/verkyyi/g
 
 Everything here is disposable. Code is intentionally simple so the agents have room to do real work without tripping over real-project complexity.
 
+> ⚠️ **This is a testing playground, not a real project.** Please don't file bug reports about `greet()` — the bugs are there on purpose. If you're interested in the pattern itself, see [github-agent-runner](https://github.com/verkyyi/github-agent-runner). For security issues, see [SECURITY.md](SECURITY.md).
+
 ## Layout
 
 ```
