@@ -23,7 +23,7 @@ concurrency:
   group: agent-team-issue-${{ inputs.issue_number }}
   cancel-in-progress: false
 
-timeout-minutes: 15
+timeout-minutes: 10
 
 permissions:
   contents: read
@@ -52,7 +52,7 @@ safe-outputs:
   dispatch-workflow:
     workflows: [implementer-agent]
     max: 1
-source: verkyyi/github-agent-runner/catalog/agent-team/planner-agent.md@05c0e3807f8737c442077dd556d605c73cda9e2f
+source: verkyyi/github-agent-runner/catalog/agent-team/planner-agent.md@0b2e7cfdd600a02265b0441a74bb18af8c634aab
 ---
 
 # Planner Agent
