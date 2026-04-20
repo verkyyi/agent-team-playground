@@ -68,7 +68,7 @@ safe-outputs:
   dispatch-workflow:
     workflows: [implementer-agent]
     max: 1
-source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@80d8a184e96add12242c9c8d83c906cf791d8242
+source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@ba1eb4e684b9a71179bea3b337f74e9afbf2040e
 ---
 
 # Reviewer Agent
