@@ -9,6 +9,7 @@ description: |
 on:
   issues:
     types: [labeled]
+    names: [agent-team]
 
 concurrency:
   group: agent-team-issue-${{ github.event.issue.number }}
@@ -35,7 +36,7 @@ safe-outputs:
     allowed: [state:plan-needed, state:blocked]
     max: 2
     target: "*"
-source: verkyyi/github-agent-runner/catalog/agent-team/spec-agent.md@96be4d126e18fcd8263c4d3740e725de9e5811fb
+source: verkyyi/github-agent-runner/catalog/agent-team/spec-agent.md@784f072160ed41d43d95cb427b565c4cecd9b8aa
 ---
 
 # Spec Agent

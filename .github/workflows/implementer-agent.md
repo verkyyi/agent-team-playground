@@ -9,6 +9,7 @@ description: |
 on:
   issues:
     types: [labeled]
+    names: [state:impl-needed]
 
 concurrency:
   group: agent-team-issue-${{ github.event.issue.number }}
@@ -55,7 +56,7 @@ safe-outputs:
     allowed: [state:impl-needed]
     max: 1
     target: "*"
-source: verkyyi/github-agent-runner/catalog/agent-team/implementer-agent.md@b3f6341bc54f910b733d9e04150c80ab78ed0419
+source: verkyyi/github-agent-runner/catalog/agent-team/implementer-agent.md@784f072160ed41d43d95cb427b565c4cecd9b8aa
 ---
 
 # Implementer Agent

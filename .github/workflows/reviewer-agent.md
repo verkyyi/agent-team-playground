@@ -10,6 +10,7 @@ description: |
 on:
   pull_request:
     types: [labeled]
+    names: [agent-team]
 
 concurrency:
   group: agent-team-pr-${{ github.event.pull_request.number }}
@@ -48,7 +49,7 @@ safe-outputs:
     allowed: [state:done, state:impl-needed, state:blocked, agent-team:reviewed]
     max: 3
     target: "*"
-source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@b3f6341bc54f910b733d9e04150c80ab78ed0419
+source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@784f072160ed41d43d95cb427b565c4cecd9b8aa
 ---
 
 # Reviewer Agent
