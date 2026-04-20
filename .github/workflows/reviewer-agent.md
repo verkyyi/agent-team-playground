@@ -68,7 +68,7 @@ safe-outputs:
   dispatch-workflow:
     workflows: [implementer-agent]
     max: 1
-source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@0b2e7cfdd600a02265b0441a74bb18af8c634aab
+source: verkyyi/github-agent-runner/catalog/agent-team/reviewer-agent.md@80d8a184e96add12242c9c8d83c906cf791d8242
 ---
 
 # Reviewer Agent
@@ -143,7 +143,15 @@ Then take the **one** action matching the verdict:
   <!-- /agent-team:summary -->
   ```
 
-  To fill in the `<spec-run-id>`, `<plan-run-id>`, `<impl-run-id>` fields: use `gh run list --workflow=<name>.yml --json databaseId,createdAt,conclusion --limit 10` and pick the most recent successful run of each stage that precedes yours in time. If a run-id lookup fails for any stage, write `(run link unavailable)` in that row instead of guessing — don't block the pipeline on a cosmetic link.
+  To fill in the `<spec-run-id>`, `<plan-run-id>`, `<impl-run-id>` fields, use the workflow display name (not the file name):
+
+  ```
+  gh run list --workflow="Spec Agent"        --json databaseId,createdAt,conclusion --limit 10
+  gh run list --workflow="Planner Agent"     --json databaseId,createdAt,conclusion --limit 10
+  gh run list --workflow="Implementer Agent" --json databaseId,createdAt,conclusion --limit 10
+  ```
+
+  Pick the most recent **successful** run of each stage that precedes yours in time. If a run-id lookup fails for any stage, write `(run link unavailable)` in that row instead of guessing — don't block the pipeline on a cosmetic link.
 
 - **Kickback** → Add `state:impl-needed` to the issue (cosmetic breadcrumb). Remove `state:review-needed`. **Dispatch the implementer-agent workflow** with:
     - `issue_number`: from your input

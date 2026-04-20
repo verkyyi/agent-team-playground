@@ -40,10 +40,12 @@ safe-outputs:
   dispatch-workflow:
     workflows: [planner-agent]
     max: 1
-source: verkyyi/github-agent-runner/catalog/agent-team/spec-agent.md@0b2e7cfdd600a02265b0441a74bb18af8c634aab
+source: verkyyi/github-agent-runner/catalog/agent-team/spec-agent.md@80d8a184e96add12242c9c8d83c906cf791d8242
 ---
 
 # Spec Agent
+
+<!-- e2e-verify-test-marker: harmless branch marker used by tests/test-e2e.sh --install-from-ref verification -->
 
 You are the **spec agent** in a four-role agent-team pipeline (spec → plan → impl → review). A human just added the `agent-team` label to this issue, which is the opt-in signal. Your job: produce the spec, then dispatch the planner agent with the issue number.
 
