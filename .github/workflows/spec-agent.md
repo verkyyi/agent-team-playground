@@ -30,10 +30,6 @@ tools:
     min-integrity: none
 
 safe-outputs:
-  # Trusted-input pipeline (user labels their own issue on their own repo).
-  # Skip the ~1-min threat-detection classifier between agent and safe_outputs.
-  # Saves wall-clock per run without meaningful security loss in this context.
-  threat-detection: false
   add-comment:
     max: 1
     target: "*"
@@ -44,6 +40,7 @@ safe-outputs:
   dispatch-workflow:
     workflows: [planner-agent]
     max: 1
+source: verkyyi/github-agent-runner/catalog/agent-team/spec-agent.md@ba1eb4e684b9a71179bea3b337f74e9afbf2040e
 ---
 
 # Spec Agent
